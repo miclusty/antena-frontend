@@ -10,6 +10,7 @@ import FeaturedCluster from './components/common/FeaturedCluster';
 import BiasBreakdownBar from './components/common/BiasBreakdownBar';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
+import RightPanel from './components/layout/RightPanel';
 import ArticleDetail from './components/article/ArticleDetail';
 import LocationSelector from './components/common/LocationSelector';
 import MenuView from './components/menu/MenuView';
@@ -256,8 +257,8 @@ export default function App() {
       <ConnectionStatus />
       <ToastContainer />
 
-      {/* Shell */}
-      <div class="min-h-screen bg-bg-base">
+      {/* Shell — responsive grid layout */}
+      <div id="main-content" class="min-h-screen bg-bg-base grid grid-cols-1 lg:grid-cols-[1fr_260px] xl:grid-cols-[1fr_260px_270px] gap-0 lg:gap-0">
 
         {/* Header */}
         <Header
@@ -471,6 +472,11 @@ export default function App() {
             stats={stats()}
             news={allNews()}
             categories={categories()}
+          />
+          <RightPanel
+            news={mappedNews()}
+            onNewsClick={handleNewsClick}
+            stats={stats()}
           />
         </Show>
 

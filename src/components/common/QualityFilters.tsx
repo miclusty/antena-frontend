@@ -10,8 +10,8 @@ interface QualityFiltersProps {
 
 const FILTERS: { id: QualityFilter; label: string; icon: string; desc: string }[] = [
   { id: 0, label: 'Todas', icon: 'all_inclusive', desc: 'Sin filtro' },
-  { id: 0.7, label: 'Alta', icon: 'signal_4bar', desc: '≥ 0.7' },
-  { id: 0.4, label: 'Media', icon: 'signal_3bar', desc: '≥ 0.4' },
+  { id: 0.7, label: 'Alta', icon: 'signal_4_bar', desc: '≥ 0.7' },
+  { id: 0.4, label: 'Media', icon: 'signal_3_bar', desc: '≥ 0.4' },
 ];
 
 export default function QualityFilters(props: QualityFiltersProps) {
